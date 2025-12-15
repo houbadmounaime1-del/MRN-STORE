@@ -2,76 +2,53 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>MRN-STORE</title>
+  <title>متجر الملابس</title>
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial;
       background: #f2f2f2;
       margin: 0;
-      padding: 0;
-      text-align: center;
       direction: rtl;
+      text-align: center;
     }
 
     header {
-      background: #111;
+      background: black;
       color: white;
       padding: 20px;
       font-size: 26px;
     }
 
-    .products {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin: 20px;
-    }
-
     .product {
       background: white;
-      width: 220px;
+      width: 260px;
+      margin: 20px auto;
       padding: 15px;
-      border-radius: 12px;
+      border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .product img {
+    img {
       width: 100%;
       height: 220px;
       object-fit: cover;
       border-radius: 10px;
     }
 
-    .product h3 {
-      margin: 10px 0 5px;
-    }
-
-    .product p {
-      margin: 5px 0;
-      font-weight: bold;
-    }
-
-    .whatsapp {
-      display: block;
-      background: #25D366;
-      color: white;
+    input, button {
+      width: 100%;
       padding: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
       margin-top: 10px;
+      font-size: 16px;
     }
 
-    .whatsapp:hover {
-      background: #1ebe5d;
-    }
-
-    footer {
-      margin: 20px;
-      color: #777;
-      font-size: 14px;
+    button {
+      background: #000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -79,36 +56,27 @@
 <body>
 
 <header>
-   MRN-STORE
+ MRN-STORE
 </header>
 
-<section class="products">
+<div class="product">
+  <img src="images/shirt.jpg">
+  <h3>men shirt</h3>
+  <p>السعر: 2200 دج</p>
 
-  <!-- المنتج الأول -->
-  <div class="product">
-    <img src="images/MRN.jpg">
-    <h3>MEN SHIRT</h3>
-    <p>السعر: 2500 دج</p>
-    <a class="whatsapp" href="https://wa.me/213540942085">
-      اطلب عبر واتساب
-    </a>
-  </div>
+  <!-- نموذج الطلب -->
+  <form action="https://formsubmit.co/dbrinof@gmail.com" method="POST">
+    
+    <input type="hidden" name="المنتج" value="men shirt">
+    <input type="hidden" name="السعر" value="2200 دج">
 
-  <!-- المنتج الثاني -->
-  <div class="product">
-    <img src="images/MRN.jpg">
-    <h3>WOMEN SHIRT</h3>
-    <p>السعر: 4000 دج</p>
-    <a class="whatsapp" href="https://wa.me/213540942085">
-      اطلب عبر واتساب
-    </a>
-  </div>
+    <input type="text" name="الاسم" placeholder="اسمك" required>
+    <input type="tel" name="الهاتف" placeholder="رقم الهاتف" required>
+    <input type="text" name="العنوان" placeholder="العنوان" required>
 
-</section>
-
-<footer>
-  © 2025 جميع الحقوق محفوظة
-</footer>
+    <button type="submit">إرسال الطلب</button>
+  </form>
+</div>
 
 </body>
 </html>
