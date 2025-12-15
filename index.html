@@ -2,23 +2,113 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>MRN-STORE</title>
-  <link rel="stylesheet" href="style.css">
+  <title>متجر الملابس</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      direction: rtl;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      font-size: 26px;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .product {
+      background: #fff;
+      width: 220px;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    .whatsapp {
+      display: block;
+      background: #25D366;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .whatsapp:hover {
+      background: #1ebe5d;
+    }
+
+    footer {
+      margin: 20px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
-  <h1>MRN-STORE</h1>
+ MRN-STORE
 </header>
 
 <section class="products">
+
+  <!-- منتج 1 -->
   <div class="product">
-    <img src="images/MRN.jpg">
-    <h3>T-shirt over size</h3>
-    <p>السعر:2200  دج</p>
-    <button>اطلب الآن</button>
+    <img src="shirt.jpg">
+    <h3>قميص رجالي</h3>
+    <p>السعر: 2500 دج</p>
+    <a class="whatsapp" href="https://wa.me/213540942085">
+      اطلب عبر واتساب
+    </a>
   </div>
+
+  <!-- منتج 2 -->
+  <div class="product">
+    <img src="dress.jpg">
+    <h3>فستان نسائي</h3>
+    <p>السعر: 4000 دج</p>
+    <a class="whatsapp" href="https://wa.me/213558123456">
+      اطلب عبر واتساب
+    </a>
+  </div>
+
 </section>
+
+<footer>
+  © 2025 جميع الحقوق محفوظة
+</footer>
 
 </body>
 </html>
